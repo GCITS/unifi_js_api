@@ -32,9 +32,20 @@ const getPortforward = function(db, callback, site) {
   // Find some documents
   collection.find({ site_id: site }).toArray(function(err, docs) {
     assert.equal(err, null);
-    console.log("Found the following records");
-    console.log(docs);
-    callback(docs);
+    const result = [];
+    docs.forEach(element => {
+      result.push({
+        Name: element.name,
+        SourceAddress: element.src,
+        DestinationIP: element.fwd,
+        ExternalPort: element.dst_port,
+        InternalPort: element.fwd_port,
+        Protocol: element.proto
+      });
+    });
+    callback(result);
+    console.log("Found the following port forwards records");
+    console.log(result);
   });
 };
 
@@ -57,6 +68,7 @@ function callMongo(actor, database, site) {
     }
   );
 }
+
 // Use connect method to connect to the server
-callMongo(getDevices, dbName, "58ddab39e4b00eb5796c2533");
+callMongo(getDevices, dbName, "59cb0368e4b0fb3f5ada7440");
 callMongo(getPortforward, dbName, "59cb0368e4b0fb3f5ada7440");
