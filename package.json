@@ -1,0 +1,22 @@
+{
+  "name": "unifi_js_api",
+  "version": "1.0.0",
+  "description": "HTTP API for accessing UniFi controller data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diongoile/unifi_js_api.git"
+  },
+  "author": "Dion Goile",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diongoile/unifi_js_api/issues"
+  },
+  "homepage": "https://github.com/diongoile/unifi_js_api#readme",
+  "dependencies": {
+    "mongodb": "^3.1.6"
+  }
+}
