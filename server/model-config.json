@@ -38,5 +38,13 @@
   "device": {
     "dataSource": "ace",
     "public": true
+  },
+  "site": {
+    "dataSource": "ace",
+    "public": true
+  },
+  "portforward": {
+    "dataSource": "ace",
+    "public": true
   }
 }
