@@ -1,6 +1,6 @@
 {
   "name": "UniFi_JS_API",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "server/server.js",
   "engines": {
     "node": ">=4"
