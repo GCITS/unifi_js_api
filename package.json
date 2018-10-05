@@ -1,5 +1,5 @@
 {
-  "name": "UniFi_JS_API",
+  "name": "unifi-js-api",
   "version": "1.0.1",
   "main": "server/server.js",
   "engines": {
