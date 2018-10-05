@@ -1,22 +1,37 @@
 {
-  "name": "unifi_js_api",
+  "name": "loopback-test",
   "version": "1.0.0",
-  "description": "HTTP API for accessing UniFi controller data",
-  "main": "index.js",
+  "main": "server/server.js",
+  "engines": {
+    "node": ">=4"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint .",
+    "start": "node .",
+    "posttest": "npm run lint"
+  },
+  "dependencies": {
+    "compression": "^1.0.3",
+    "cors": "^2.5.2",
+    "express": "^4.16.3",
+    "helmet": "^3.10.0",
+    "loopback": "^3.22.0",
+    "loopback-boot": "^2.6.5",
+    "loopback-component-explorer": "^6.2.0",
+    "loopback-component-oauth2": "^3.2.0",
+    "loopback-connector-mongodb": "^3.8.0",
+    "mongoose": "^5.3.1",
+    "serve-favicon": "^2.0.1",
+    "strong-error-handler": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.17.1",
+    "eslint-config-loopback": "^8.0.0"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/diongoile/unifi_js_api.git"
+    "type": "",
+    "url": ""
   },
-  "author": "Dion Goile",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/diongoile/unifi_js_api/issues"
-  },
-  "homepage": "https://github.com/diongoile/unifi_js_api#readme",
-  "dependencies": {
-    "mongodb": "^3.1.6"
-  }
+  "license": "UNLICENSED",
+  "description": "loopback-test"
 }

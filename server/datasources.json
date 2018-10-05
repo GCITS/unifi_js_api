@@ -1,0 +1,26 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "ace": {
+    "host": "127.0.0.1",
+    "port": 27117,
+    "url": "mongodb://127.0.0.1:27117/ace",
+    "database": "ace",
+    "password": "",
+    "name": "ace",
+    "user": "",
+    "connector": "mongodb"
+  },
+  "auth": {
+    "host": "127.0.0.1",
+    "port": 27117,
+    "url": "mongodb://127.0.0.1:27117/auth",
+    "database": "auth",
+    "password": "",
+    "name": "auth",
+    "user": "",
+    "connector": "mongodb"
+  }
+}
