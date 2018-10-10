@@ -1,4 +1,40 @@
-"use strict";
+var https = require("https");
+var sslConfig = require("./ssl-config");
+////////////////////
+// INIT GREENLOCK //
+////////////////////
+
+var greenlock = require("greenlock").create({
+  version: "draft-12",
+  server: "https://acme-v02.api.letsencrypt.org/directory",
+  configDir: "~/.config/acme",
+
+  email: "dion@gcits.com", // IMPORTANT: Change email and domains
+  agreeTos: true, // Accept Let's Encrypt v2 Agreement
+  communityMember: true, // Get (rare) non-mandatory updates about cool greenlock-related stuff (default false)
+  securityUpdates: true, // Important and mandatory notices related to security or breaking API changes (default true)
+
+  approveDomains: approveDomains
+});
+/////////////////////
+// APPROVE DOMAINS //
+/////////////////////
+
+function approveDomains(opts, certs, cb) {
+  // check for domains you want to receive certificates for
+  if ("unifi.gcits.com" === opts.domain) {
+    cb(null, { options: opts, certs: certs });
+    return;
+  }
+
+  // return error otherwise
+  cb(new Error("bad domain"));
+}
+var options = {
+  key: sslConfig.privateKey,
+  cert: sslConfig.certificate
+};
+("use strict");
 
 var loopback = require("loopback");
 var boot = require("loopback-boot");
