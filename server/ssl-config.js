@@ -1,8 +1,9 @@
-var path = require("path"),
-  fs = require("fs");
+var path = require("path");
+var fs = require("fs");
+
 exports.privateKey = fs
-  .readFileSync(path.join(__dirname, "./private/privatekey.pem"))
+  .readFileSync(path.join(__dirname, "./private/localhost.key.pem"))
   .toString();
 exports.certificate = fs
-  .readFileSync(path.join(__dirname, "./private/certificate.pem"))
+  .readFileSync(path.join(__dirname, "./private/localhost.cert.pem"))
   .toString();
