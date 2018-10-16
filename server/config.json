@@ -1,8 +1,7 @@
 {
   "restApiRoot": "/api",
-  "host": "localhost",
-  "httpPort": 80,
-  "port": 443,
+  "host": "unifi.gcits.com",
+  "port": 9443,
   "remoting": {
     "context": false,
     "rest": {
