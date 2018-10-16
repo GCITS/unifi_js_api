@@ -58,5 +58,13 @@
   "portconf": {
     "dataSource": "ace",
     "public": true
+  },
+  "routing": {
+    "dataSource": "ace",
+    "public": true
+  },
+  "wlanconf": {
+    "dataSource": "ace",
+    "public": true
   }
 }
