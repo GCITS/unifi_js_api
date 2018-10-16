@@ -50,5 +50,13 @@
   "firewallgroup": {
     "dataSource": "ace",
     "public": true
+  },
+  "networkconf": {
+    "dataSource": "ace",
+    "public": true
+  },
+  "portconf": {
+    "dataSource": "ace",
+    "public": true
   }
 }
