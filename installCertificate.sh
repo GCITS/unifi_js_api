@@ -1,2 +1,2 @@
-sudo certbot certonly --standalone -d inform.gcits.com
-sudo cp /etc/letsencrypt/live/inform.gcits.com/ server/private/
+sudo certbot certonly --webroot -w /var/www/unifi_js_api/server/private/ -d inform.gcits.com
+sudo certbot -a dns-plugin -i apache -d inform.gcits.com --server https://acme-v02.api.letsencrypt.org/directory
