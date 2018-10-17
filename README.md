@@ -19,3 +19,6 @@ Todo:
 2. Add all models
 3. Add all model properties
 4. Document
+
+
+Any feedback I would love to hear, info@gcits.com
