@@ -22,8 +22,53 @@ Todo:
 
 Requirements:
 
-1. Node 
+1. Node
 2. UniFi Controller 5.9.x or later (Or a more current version of Mongo than the builtin version on 5.8.x)
+3. OpenSSL installed and added to path if you are on Windows
 
+Installation:
+
+```bash
+git clone https://github.com/GCITS/unifi_js_api.git
+cd unifi_js_api
+```
+
+Edit server/config.json and change the "host" field to your controller hostname or desired URL
+
+```bash
+npm install
+npm run generate-key
+npm run generate-cert
+npm run generate-csr
+node .
+```
+
+Browse to https://CONTROLLERNAMEHERE:9443/explorer
+
+Make a POST call with the following JSON to /Users/ to create a new user making calls
+
+```JSON
+{
+"email": "user@email.com",
+"password": "chooseApassword"
+}
+```
+
+Make a POST call with the same JSON to /User/Login/ to be returned an access token
+
+```JSON
+{
+  "id": "VERYLONGGENERATEDACCESSTOKEN",
+  "ttl": 1209600,
+  "created": "2018-10-17T00:56:33.569Z",
+  "userId": "5bc688b6296e8f006d70cfe5"
+}
+```
+
+You can use your access token to make queries in the format of
+
+```curl
+https://localhost:9443/api/devices?access_token=VERYLONGGENERATEDACCESSTOKEN
+```
 
 Any feedback I would love to hear, info@gcits.com
