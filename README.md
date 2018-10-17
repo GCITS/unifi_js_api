@@ -20,5 +20,10 @@ Todo:
 3. Add all model properties
 4. Document
 
+Requirements:
+
+1. Node 
+2. UniFi Controller 5.9.x or later (Or a more current version of Mongo than the builtin version on 5.8.x)
+
 
 Any feedback I would love to hear, info@gcits.com
