@@ -7,6 +7,7 @@ A couple of important notes:
 1. I have not tested this for security, I recommend firewalling it off from the world or extending the built-in security
 2. Unifi have their own shell API, which I do not use. This applications talks directly with your MongoDB database
 3. Becuase of point 2, I recommend using this only for reading data
+4. A new database called auth will be made on your MongoDB server which is used for authentication
 
 I am looking for help with the following:
 

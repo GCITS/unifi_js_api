@@ -11,9 +11,7 @@
       "required": true
     },
     "port_table": {
-      "type": [
-        "object"
-      ]
+      "type": ["object"]
     },
     "name": {
       "type": "string"
@@ -26,7 +24,7 @@
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "$everyone",
-      "permission": "ALLOW"
+      "permission": "DENY"
     },
     {
       "accessType": "*",
